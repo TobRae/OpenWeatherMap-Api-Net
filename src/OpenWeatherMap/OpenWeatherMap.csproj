@@ -72,7 +72,10 @@
     <Compile Include="Clients\IForecastClient.cs" />
     <Compile Include="Clients\ISearchClient.cs" />
     <Compile Include="Clients\SearchClient.cs" />
+    <Compile Include="Exceptions\InvalidContentException.cs" />
     <Compile Include="Exceptions\OpenWeatherMapException.cs" />
+    <Compile Include="Exceptions\OpenWeatherRequestException.cs" />
+    <Compile Include="Exceptions\UnsuccessfulRequestException.cs" />
     <Compile Include="Extensions\DictionnaryExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\UriExtensions.cs" />

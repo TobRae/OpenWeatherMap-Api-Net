@@ -66,8 +66,17 @@
     <Compile Include="..\OpenWeatherMap\Clients\SearchClient.cs">
       <Link>Clients\SearchClient.cs</Link>
     </Compile>
+    <Compile Include="..\OpenWeatherMap\Exceptions\InvalidContentException.cs">
+      <Link>Exceptions\InvalidContentException.cs</Link>
+    </Compile>
     <Compile Include="..\OpenWeatherMap\Exceptions\OpenWeatherMapException.cs">
       <Link>Exceptions\OpenWeatherMapException.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Exceptions\OpenWeatherRequestException.cs">
+      <Link>Exceptions\OpenWeatherRequestException.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Exceptions\UnsuccessfulRequestException.cs">
+      <Link>Exceptions\UnsuccessfulRequestException.cs</Link>
     </Compile>
     <Compile Include="..\OpenWeatherMap\Extensions\DictionnaryExtensions.cs">
       <Link>Extensions\DictionnaryExtensions.cs</Link>
@@ -186,9 +195,6 @@
     <Compile Include="..\OpenWeatherMap\OpenWeatherMapClient.cs">
       <Link>OpenWeatherMapClient.cs</Link>
     </Compile>
-    <Compile Include="Exceptions\InvalidContentException.cs" />
-    <Compile Include="Exceptions\OpenWeatherRequestException.cs" />
-    <Compile Include="Exceptions\UnsuccessfulRequestException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
