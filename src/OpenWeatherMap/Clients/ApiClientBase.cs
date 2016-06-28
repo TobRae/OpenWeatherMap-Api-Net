@@ -204,7 +204,7 @@ namespace OpenWeatherMap
 
             if (!response.IsSuccessStatusCode)
             {
-                throw new OpenWeatherMapException(response);
+                throw new UnsuccessfulRequestException(response);
             }
 
             var responseString = await response.Content.ReadAsStringAsync();
@@ -212,7 +212,7 @@ namespace OpenWeatherMap
             // OpenWeatherMap returns errors with json
             if (string.IsNullOrEmpty(responseString) || responseString.StartsWith("{", StringComparison.Ordinal))
             {
-                throw new OpenWeatherMapException(response);
+                throw new InvalidContentException(response, responseString);
             }
 
             var responseStream = await response.Content.ReadAsStreamAsync();
@@ -223,7 +223,7 @@ namespace OpenWeatherMap
                 return (T)xmlSerializer.Deserialize(xmlReader);
             }
 
-            throw new OpenWeatherMapException(response);
+            throw new InvalidContentException(response, responseString);
         }
     }
 }

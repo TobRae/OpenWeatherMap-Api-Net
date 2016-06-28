@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Joan Caron</authors>
+    <owners>Joan Caron</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>OpenWeatherMap</description>
+    <copyright>Copyright 2016</copyright>
+  </metadata>
+</package>

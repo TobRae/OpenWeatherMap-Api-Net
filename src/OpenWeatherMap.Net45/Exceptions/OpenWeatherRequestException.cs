@@ -1,38 +1,38 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="OpenWeatherMapException.cs" company="Joan Caron">
-// Copyright (c) 2014 All Rights Reserved
+// Copyright (c) 2016 All Rights Reserved
 // </copyright>
-// <author>Joan Caron</author>
+// <author>Joan Caron, Tobias Raederscheidt</author>
 // <summary>Implements the open weather map exception class</summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace OpenWeatherMap
 {
     using System;
-    using System.Net;
     using System.Net.Http;
 
     /// <summary>
     ///     Class OpenWeatherMapException.
     /// </summary>
     /// <seealso cref="T:System.Exception"/>
-    public sealed class OpenWeatherMapException : Exception
+    public class OpenWeatherRequestException : Exception
     {
         /// <summary>
         ///     Initializes a new instance of the <see cref="OpenWeatherMapException"/> class.
         /// </summary>
-        internal OpenWeatherMapException(string message)
+        /// <param name="response">The response.</param>
+        internal OpenWeatherRequestException(string message, HttpResponseMessage response)
             : base(message)
         {
+            this.Response = response;
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="OpenWeatherMapException"/> class.
+        ///     Gets the response message.
         /// </summary>
-        /// <param name="ex">The ex.</param>
-        internal OpenWeatherMapException(Exception ex)
-            : base("OpenWeatherMap : an error occurred", ex)
-        {
-        }
+        /// <value>
+        ///     The response.
+        /// </value>
+        public HttpResponseMessage Response { get; private set; }
     }
 }

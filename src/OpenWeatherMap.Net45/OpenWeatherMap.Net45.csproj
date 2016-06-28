@@ -186,6 +186,9 @@
     <Compile Include="..\OpenWeatherMap\OpenWeatherMapClient.cs">
       <Link>OpenWeatherMapClient.cs</Link>
     </Compile>
+    <Compile Include="Exceptions\InvalidContentException.cs" />
+    <Compile Include="Exceptions\OpenWeatherRequestException.cs" />
+    <Compile Include="Exceptions\UnsuccessfulRequestException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
